@@ -1,2 +1,5 @@
-package com.devx.whatsappclone.message;public class MessageState {
+package com.devx.whatsappclone.message;
+
+public enum MessageState {
+    SENT, SEEN
 }

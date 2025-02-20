@@ -1,4 +1,4 @@
-package com.devx.whatsappclone.chat;
+package com.devx.whatsappclone.common;
 
 import lombok.*;
 

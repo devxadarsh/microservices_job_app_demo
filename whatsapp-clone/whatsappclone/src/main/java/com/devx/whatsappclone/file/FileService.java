@@ -1,4 +1,4 @@
-package com.devx.whatsappclone.file.FileService;
+package com.devx.whatsappclone.file;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
