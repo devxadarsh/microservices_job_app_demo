@@ -28,7 +28,8 @@ public class UserSynchronizer {
     }
 
     private Optional<String> getUserEmail(Jwt token) {
-        Map<String, Object> attributes = token.getClaim("attributes");
+//        Map<String, Object> attributes = token.getClaim("attributes");
+        Map<String, Object> attributes = token.getClaims();
         if(attributes.containsKey("email")) {
             return Optional.of(attributes.get("email").toString());
         }

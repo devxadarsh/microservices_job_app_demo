@@ -43,6 +43,8 @@ services:
       - whatsapp-clone-network
     command:
       - start-dev
+    volumes:
+      - keycloak:/data/keycloak
 
 networks:
   whatsapp-clone-network:

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import Keycloak from 'keycloak-js';
 
 @Injectable({
@@ -7,7 +8,7 @@ import Keycloak from 'keycloak-js';
 export class KeycloakService {
   private _keycloak: Keycloak | undefined;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   get keycloak() {
     if (!this._keycloak) {
@@ -22,8 +23,8 @@ export class KeycloakService {
 
   async init() {
     const authenticated = await this.keycloak.init({
-      onLoad: 'login-required'
-    })
+      onLoad: 'login-required',
+    });
   }
 
   async login() {
@@ -43,7 +44,7 @@ export class KeycloakService {
   }
 
   logOut() {
-    return this.keycloak.login({redirectUri: "https://localhost:4200"});
+    return this.keycloak.login({ redirectUri: 'https://localhost:4200' });
   }
 
   accountManagement() {
