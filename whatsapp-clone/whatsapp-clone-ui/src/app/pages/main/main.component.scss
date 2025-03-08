@@ -6,6 +6,14 @@
     background: #ccc;
 }
 
+.gray-bg {
+    background-color: #f0f0f0;
+}
+
+i.active {
+    color: #1ea884;
+}
+
 .background-green {
     position: absolute;
     top: 0;
@@ -83,7 +91,7 @@
             background: linear-gradient(135deg, #d9fdd3 0%, #d9fdd3 50%, transparent 50%,transparent);
         }
     }
-    &.freind {
+    &.friend {
         justify-content: flex-start;
         > div {
             position: relative;
@@ -113,5 +121,24 @@ i {
     }
     &.ml-neg {
         margin-left: -7px;
+    }
+}
+
+.status-placeholder, .welcome-message {
+    color: #888;
+    max-width: 400px;
+}
+
+.user-img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
